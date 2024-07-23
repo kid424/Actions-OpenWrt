@@ -20,7 +20,7 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 BASE_PATH=$(pwd)
-cd packages
+cd package
 #安装和更新软件包
 UPDATE_PACKAGE() {
         local PKG_NAME=$1
