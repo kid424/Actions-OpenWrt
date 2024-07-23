@@ -49,7 +49,7 @@ UPDATE_PACKAGE "luci-app-wolplus" "animegasan/luci-app-wolplus" "main"
 UPDATE_PACKAGE "luci-app-msd_lite" "ximiTech/luci-app-msd_lite" "main"
 
 # 预置openclash文件
-CORE_TYPE=$(echo $WRT_TARGET | grep -Eiq "64|86" && echo "amd64" || echo "arm64")
+CORE_TYPE="arm64"
 CORE_META="https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-$CORE_TYPE.tar.gz"
 GEO_MMDB="https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb"
 GEO_SITE="https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat"
@@ -61,4 +61,4 @@ curl -sL -o GeoIP.dat $GEO_IP && echo "GeoIP.dat done!"
 mkdir ./core/ && cd ./core/
 curl -sL -o meta.tar.gz $CORE_META && tar -zxf meta.tar.gz && mv -f clash clash_meta && echo "meta done!"
 chmod +x ./* && rm -rf ./*.gz
-cd BASE_PATH
+cd $BASE_PATH
