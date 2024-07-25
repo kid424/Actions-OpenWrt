@@ -43,7 +43,8 @@ UPDATE_PACKAGE() {
 
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 
-sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ../feeds/packages/net/tailscale/Makefile
+#sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ../feeds/packages/net/tailscale/Makefile
+#UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 UPDATE_PACKAGE "luci-app-xupnpd" "jarod360/luci-app-xupnpd" "main"
 UPDATE_PACKAGE "luci-app-wolplus" "animegasan/luci-app-wolplus" "main"
 UPDATE_PACKAGE "luci-app-msd_lite" "ximiTech/luci-app-msd_lite" "main"
